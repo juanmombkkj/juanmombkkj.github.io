@@ -60,6 +60,34 @@ https://templatemo.com/tm-557-grad-school
           <div class="caption">
               <h6>Você não é uma planta – você tem o direito de escolher algo melhor!</h6>
               <h2><em>ETERNAL</em> FROST</h2>
+            <div id="conta-usuarios" class="alert alert-info">
+                Carregando número de contas criadas...
+              </div>
+              
+              <script>
+                // Faz a requisição para o PHP e exibe a contagem
+                $(document).ready(function() {
+                  $.ajax({
+                    url: 'https://stormcurse.com.br/assets/js/users.php', // Caminho para o PHP que conta as linhas
+                    type: 'GET',
+                    success: function(response) {
+                      try {
+                        let data = JSON.parse(response);
+                        if (data.status === "success") {
+                          $('#conta-usuarios').html(`Número de contas criadas: <strong>${data.totalUsuarios}</strong>`);
+                        } else {
+                          $('#conta-usuarios').html(`Erro: ${data.message}`);
+                        }
+                      } catch (error) {
+                        $('#conta-usuarios').html('Erro ao processar a resposta do servidor.');
+                      }
+                    },
+                    error: function() {
+                      $('#conta-usuarios').html('Erro ao conectar com o servidor.');
+                    }
+                  });
+                });
+              </script>
               <div class="main-button">
                 <div class="scroll-to-section"><a href="#section2">Criar conta - Adiantada!</a></div>
             </div>
