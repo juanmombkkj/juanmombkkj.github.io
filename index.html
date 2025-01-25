@@ -61,8 +61,24 @@ https://templatemo.com/tm-557-grad-school
               <h6>Você não é uma planta – você tem o direito de escolher algo melhor!</h6>
               <h2><em>ETERNAL</em> FROST</h2>
               <div class="main-button">
-                <div class="scroll-to-section"><a href="#section2">Criar conta - Adiantada!</a></div>
-            </div>
+                <div class="scroll-to-section">
+                  <a href="#section2" id="scrollButton">Criar conta - Adiantada!</a>
+                </div>
+              </div>
+              
+              <!-- Adicione o elemento de destino com um ID correspondente -->
+              
+              <script>
+                $(document).ready(function() {
+                  $('#scrollButton').on('click', function(event) {
+                    event.preventDefault(); // Impede o comportamento padrão do link
+                    $('html, body').animate({
+                      scrollTop: $($(this).attr('href')).offset().top
+                    }, 800); // 800 ms para o efeito de rolagem
+                  });
+                });
+              </script>
+                            
             <div class="discord-icon" style="text-align: center; margin-top: 10px;">
               <a href="https://discord.gg/hCeqCQ89Dk" target="_blank">
                   <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-4-1.png" alt="Discord" style="width: 48px; height: 48px;">
@@ -160,6 +176,8 @@ https://templatemo.com/tm-557-grad-school
         </div>
         <div class="col-md-5">
   <div class="right-content">
+    <section id="section2">
+    </section>
     <div class="top-content">
       <h6>Registre sua conta gratuita e <em>tenha acesso imediato</em> a aventuras online relacionadas ao Eternal Frost</h6>
     </div>
