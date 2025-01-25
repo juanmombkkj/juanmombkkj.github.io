@@ -206,29 +206,40 @@ https://templatemo.com/tm-557-grad-school
 </div>
 
 <script>
-  // Envio do formulário via AJAX
+  // Envio do formulário via AJAX com debug visível no site
   $('#register-form').on('submit', function(event) {
     event.preventDefault(); // Impede o envio normal do formulário
 
     // Cria um objeto FormData com os dados do formulário
     var formData = $(this).serialize();
 
+    // Exibe os dados que estão sendo enviados
+    $('#status-message').html('<div class="alert alert-info">Enviando dados: ' + formData + '</div>');
+
     // Envia o formulário para o PHP via AJAX
     $.ajax({
-      url: 'websitereg.zapto.org/assets/js/block.php',  // Arquivo PHP onde os dados serão processados
+      url: 'https://websitereg.zapto.org/assets/js/block.php',  // Caminho completo para o PHP
       type: 'POST',                   // Método de envio
       data: formData,                 // Dados do formulário
       success: function(response) {
-        // Exibe a resposta do PHP (mensagem de sucesso ou erro)
-        $('#status-message').html('<div class="alert alert-info">' + response + '</div>');
+        // Mostra a resposta do servidor no site
+        $('#status-message').html('<div class="alert alert-success">' + response + '</div>');
       },
-      error: function() {
-        // Caso haja erro na requisição, exibe uma mensagem de erro
-        $('#status-message').html('<div class="alert alert-danger">Ocorreu um erro ao processar sua solicitação. Tente novamente.</div>');
+      error: function(jqXHR, textStatus, errorThrown) {
+        // Exibe os erros diretamente no site
+        let errorDetails = `
+          <strong>Erro na requisição AJAX:</strong><br>
+          <strong>Status:</strong> ${textStatus}<br>
+          <strong>Mensagem de erro:</strong> ${errorThrown}<br>
+          <strong>Resposta do servidor:</strong> ${jqXHR.responseText || 'Nenhuma resposta recebida.'}
+        `;
+
+        $('#status-message').html('<div class="alert alert-danger">' + errorDetails + '</div>');
       }
     });
   });
 </script>
+
 
         
       </div>
