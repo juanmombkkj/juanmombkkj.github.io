@@ -36,19 +36,18 @@ https://templatemo.com/tm-557-grad-school
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="#"><em>ETERNAL</em> FROST</a>
+        <a href="#"><em>ETERNAL</em> FROST</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
-      <ul class="main-menu">
-        <li><a href="#">Inicio</a></li>
-        </li>
-        
-        
-                <!-- <li><a href="#section5">Video</a></li> -->
-      </ul>
+        <ul class="main-menu">
+            <li><a href="#top">Início</a></li> <!-- Link para a seção do banner principal -->
+            <li><a href="#server-info" id="scrollButtons">Informações</a></li> <!-- Link para a seção de informações do servidor -->
+        </ul>
     </nav>
-  </header>
+</header>
+
+
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
@@ -71,6 +70,16 @@ https://templatemo.com/tm-557-grad-school
               <script>
                 $(document).ready(function() {
                   $('#scrollButton').on('click', function(event) {
+                    event.preventDefault(); // Impede o comportamento padrão do link
+                    $('html, body').animate({
+                      scrollTop: $($(this).attr('href')).offset().top
+                    }, 800); // 800 ms para o efeito de rolagem
+                  });
+                });
+              </script>
+              <script>
+                $(document).ready(function() {
+                  $('#scrollButtons').on('click', function(event) {
                     event.preventDefault(); // Impede o comportamento padrão do link
                     $('html, body').animate({
                       scrollTop: $($(this).attr('href')).offset().top
@@ -148,35 +157,29 @@ https://templatemo.com/tm-557-grad-school
             <div>
               <h4>Inauguração <em>DIA 08/02/2025</em> às 20 Horas!</h4>
               <div class="counter">
-            
                 <div class="days">
-                  <div class="value">00</div>
-                  <span>Dias</span>
+                    <div class="value">00</div>
+                    <span>Dias</span>
                 </div>
-            
                 <div class="hours">
-                  <div class="value">00</div>
-                  <span>Horas</span>
+                    <div class="value">00</div>
+                    <span>Horas</span>
                 </div>
-            
                 <div class="minutes">
-                  <div class="value">00</div>
-                  <span>Minutos</span>
+                    <div class="value">00</div>
+                    <span>Minutos</span>
                 </div>
-            
                 <div class="seconds">
-                  <div class="value">00</div>
-                  <span>Segundos</span>
+                    <div class="value">00</div>
+                    <span>Segundos</span>
                 </div>
-            
-              </div>
             </div>
-
-            <div class="card" style="background-color: rgba(250,250,250,0.1); color: white; padding: 20px; border-radius: 10px; margin-top: 198px; position: relative; max-width: 100%; height: auto;">
+            </div>
+            <div class="card" style="background-color: rgba(250,250,250,0.1); color: white; padding: 20px; border-radius: 10px; margin-top: 198px; position: relative; max-width: 100%; height: auto; top: -185px; left: 21px;">
               <h5 style="color: #ffcc00; font-size: 18px; margin-bottom: 10px;">Promoção Especial!</h5>
               <p style="font-size: 14px; margin-bottom: 15px;">As primeiras <strong>100 contas criadas</strong> ganharão uma montaria exclusiva ao iniciar!</p>
               <img src="https://wow.zamimg.com/modelviewer/live/webthumbs/npc/14/25870.png" alt="Montaria" style="width: 100%; max-width: 200px; border-radius: 10px; margin: 0 auto; display: block; animation: glow 2s infinite alternate;">
-            </div>
+          </div>
             
 
             <style>
@@ -195,14 +198,14 @@ https://templatemo.com/tm-557-grad-school
         <div class="col-md-5">
   <div class="right-content">
     <section id="section2">
-    </section>
+    
     <div class="top-content">
       <h6>Registre sua conta gratuita e <em>tenha acesso imediato</em> a aventuras online relacionadas ao Eternal Frost</h6>
     </div>
     <div id="conta-usuarios" class="alert alert-info">
       Carregando número de contas criadas...
     </div>
-
+  </section>
     <script>
                 // Faz a requisição para o PHP e exibe a contagem
                 $(document).ready(function() {
@@ -268,6 +271,560 @@ https://templatemo.com/tm-557-grad-school
     </form>
   </div>
 </div>
+
+<section class="section server-info" id="server-info" style="background-color: rgba(250, 250, 250, 0.1); color: white; padding: 40px 0; margin-top: -160px; width: 100%; text-align: center; border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h2 class="section-title" style="color: #ffcc00; font-size: 24px; font-weight: bold; margin-bottom: 15px;">Informações do Servidor</h2>
+        <p class="section-subtitle" style="font-size: 16px; margin-bottom: 20px;">Tudo o que você precisa saber para se conectar ao Eternal Frost</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="info-box">
+          <h4><i class="fa fa-server"></i> Realmlist</h4>
+          <p>set realmlist eternal-frost.shop</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="info-box">
+          <h4><i class="fa fa-star"></i> Rates</h4>
+          <p>XP: 15x | Gold: 5x | Proff: 4x</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="info-box">
+          <h4><i class="fa fa-clock-o"></i> Status do Servidor</h4>
+          <p id="server-status">Carregando...</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <a href="https://discord.gg/hCeqCQ89Dk" class="btn" target="_blank" style="background-color: #ffcc00; color: #1a1a1a; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">
+          <i class="fa fa-comments"></i> Junte-se ao nosso Discord
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Efeito de gelo brilhante nas bordas da seção server-info */
+  .server-info {
+    border: 2px solid #00b4db; /* Borda azul */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6); /* Sombra azul */
+    animation: borderGlow 3s infinite alternate; /* Animação de brilho */
+  }
+
+  /* Animação de brilho para a borda */
+  @keyframes borderGlow {
+    0% {
+      border-color: rgba(0, 180, 219, 0.6);
+      box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+    }
+    100% {
+      border-color: rgba(0, 180, 219, 1);
+      box-shadow: 0 0 25px rgba(0, 180, 219, 1);
+    }
+  }
+
+  /* Efeito de levantar e descer ao passar o mouse na seção inteira */
+  .server-info:hover {
+    transform: translateY(-5px); /* Move a seção para cima */
+    box-shadow: 0 10px 20px rgba(0, 180, 219, 0.4); /* Sombra ao passar o mouse */
+  }
+
+  /* Estilo dos cards */
+  .info-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+    border: 2px solid rgba(0, 180, 219, 0.6); /* Borda azul */
+    position: relative;
+    overflow: hidden; /* Para conter a borda interna */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    max-width: 220px; /* Largura reduzida */
+    margin: 0 auto; /* Centraliza o card */
+  }
+
+  /* Bordas por dentro */
+  .info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(0, 180, 219, 0.4); /* Borda interna */
+    border-radius: 10px;
+    margin: -2px; /* Ajusta a posição da borda interna */
+    z-index: -1; /* Coloca atrás do conteúdo */
+  }
+
+  .info-box h4 {
+    font-size: 18px; /* Tamanho da fonte reduzido */
+    margin-bottom: 10px;
+  }
+
+  .info-box p {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+
+  /* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+#scrollButton {
+    background: linear-gradient(145deg, #00b4db, #0083b0);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+#scrollButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+#scrollButton:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#scrollButton:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  body {
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    animation: iceGlow 5s infinite alternate;
+}
+
+@keyframes iceGlow {
+    0% {
+        background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    }
+    100% {
+        background: linear-gradient(135deg, #2c3e50, #1a1a1a);
+    }
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .button, #form-submit {
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 126, 95, 0.6);
+}
+
+.button::before, #form-submit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.button:hover::before, #form-submit:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.button:hover, #form-submit:hover {
+    box-shadow: 0 0 25px rgba(255, 126, 95, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .main-header .logo a {
+    color: #00b4db;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 180, 219, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 180, 219, 1);
+    }
+}
+
+
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  footer {
+    border-top: 2px solid #00b4db;
+    padding: 20px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    animation: footerGlow 5s infinite alternate;
+}
+
+@keyframes footerGlow {
+    0% {
+        border-top: 2px solid #00b4db;
+    }
+    100% {
+        border-top: 2px solid #0083b0;
+    }
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .discord-icon img {
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+.discord-icon img:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.1);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .card {
+    border: 2px solid #00b4db;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  #form-submit {
+    background: linear-gradient(145deg, #00b4db, #0083b0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+#form-submit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+#form-submit:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#form-submit:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+#server-status {
+    color: #00b4db;
+    font-size: 18px;
+    font-weight: bold;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 180, 219, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 180, 219, 1);
+    }
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .btn {
+    background: linear-gradient(145deg, #00b4db, #0083b0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .main-menu li a {
+    color: #00b4db;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 180, 219, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 180, 219, 1);
+    }
+}
+
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .counter {
+    display: flex;
+
+    padding: -05px; /* Padding reduzido */
+    border-radius: 10px;
+    margin: 0 auto; /* Centraliza o contador */
+    max-width: 600px; /* Define uma largura máxima para o contador */
+}
+
+.counter > div {
+    border: 2px solid #00b4db;
+    border-radius: 10px;
+    padding: 10px; /* Padding interno reduzido */
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+    background: rgba(255, 255, 255, 0.1); /* Fundo claro para contraste */
+    flex: 1; /* Faz com que os quadrados se distribuam igualmente */
+    margin: 0 5px; /* Espaçamento entre os quadrados */
+}
+
+.counter > div:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+.counter .value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00b4db;
+    animation: textGlow 2s infinite alternate;
+}
+
+.counter span {
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    margin-top: 5px;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 180, 219, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 180, 219, 1);
+    }
+}
+
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  #conta-usuarios {
+    border: 2px solid #00b4db;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+#conta-usuarios:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+#register-form {
+    height: 300px; /* Altura fixa */
+    overflow-y: auto; /* Adiciona scroll vertical se o conteúdo ultrapassar a altura */
+    border: 2px solid #00b4db;
+    border-radius: 10px;
+    padding: 20px; /* Padding padrão */
+    padding-bottom: 85px; /* Aumenta o espaço interno na parte de baixo */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+    height: auto; /* Altura automática (pode ser substituída por um valor fixo, se necessário) */
+}
+
+#register-form:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .btn {
+    background: linear-gradient(145deg, #00b4db, #0083b0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 180, 219, 0.6);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 219, 0.8);
+    transform: scale(1.05);
+}
+
+/* Adicione este CSS ao seu arquivo CSS existente ou dentro de uma tag <style> no <head> */
+
+  .main-menu li a {
+    color: #00b4db;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 180, 219, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 180, 219, 1);
+    }
+}
+
+
+</style>
+
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      url: 'https://stormcurse.com.br/assets/js/server_status.php',
+      type: 'GET',
+      success: function(response) {
+        $('#server-status').html(response);
+      },
+      error: function() {
+        $('#server-status').html('<span style="color: red;">Offline</span>');
+      }
+    });
+  });
+</script>
+
+
+
+
 
 <script>
   // Envio do formulário via AJAX com debug visível no site
