@@ -1,894 +1,1419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<title>StormCurse - The Lich King 3.3.5A - BR</title>
-<meta name="description" content="Aventure-se no Mundo de The Lich King 3.3.5a">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<meta name="keywords" content="Gaming Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!--// bootstrap-css -->
-<!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<!--// css -->
-<!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<!-- portfolio -->	
-<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="all">
-<link rel="icon" type="image/png" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1950217-1756-437a-b5cd-07d6f8e35a05/d3k3av3-f968ed09-2ba5-48a6-9ead-e16279132c35.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxOTUwMjE3LTE3NTYtNDM3YS1iNWNkLTA3ZDZmOGUzNWEwNVwvZDNrM2F2My1mOTY4ZWQwOS0yYmE1LTQ4YTYtOWVhZC1lMTYyNzkxMzJjMzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Do2BOGFe7JYMpbF_1I4Ol9RSHT5qhTA7Vg1C95N_3f8">
-<!-- //portfolio -->	
-<!-- font -->
-<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
-<!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script> 
-
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<![endif]-->
+    <title>StormCurse - The Lich King 3.3.5A - BR</title>
+    <meta name="description" content="Aventure-se no Mundo de The Lich King 3.3.5a - Servidor brasileiro de WoW WotLK">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="wow, wrath of the lich king, wotlk, private server, mmorpg, stormcurse, wow brasil">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1950217-1756-437a-b5cd-07d6f8e35a05/d3k3av3-f968ed09-2ba5-48a6-9ead-e16279132c35.png">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        :root {
+            --primary-color: #00b4d8;
+            --secondary-color: #ff9e00;
+            --dark-color: #0a0a1a;
+            --darker-color: #050510;
+            --light-color: #e6f7ff;
+            --accent-color: #ff2d75;
+            --frost-color: #8bd3ff;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 45, 117, 0.1) 0%, transparent 20%),
+                url('https://wallpapercat.com/w/full/7/8/3/914410-1920x1200-desktop-hd-lich-king-wow-background-image.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            overflow-x: hidden;
+        }
+        
+        /* Barra de rolagem personalizada */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--darker-color);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 6px;
+            border: 2px solid var(--darker-color);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--frost-color);
+        }
+        
+        /* Efeito de partículas de neve */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        /* Cabeçalho */
+        .navbar {
+            background: rgba(10, 10, 26, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.3);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(5, 5, 16, 0.95) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .navbar-brand {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--frost-color) !important;
+            text-shadow: 0 0 10px rgba(139, 211, 255, 0.7);
+            letter-spacing: 2px;
+        }
+        
+        .navbar-brand span {
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(60, 250, 177, 0.7);
+        }
+        
+        .nav-link {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--light-color) !important;
+            margin: 0 10px;
+            position: relative;
+            padding: 5px 0 !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            color: var(--frost-color) !important;
+        }
+        
+        .nav-link.active::before {
+            width: 100%;
+            background: var(--frost-color);
+        }
+        
+        /* Banner Hero */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(5, 5, 16, 0.8) 0%, rgba(10, 10, 26, 0.7) 100%);
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            color: var(--frost-color);
+            letter-spacing: 3px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-highlight {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 158, 0, 0.7);
+        }
+        
+        .btn-hero {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: var(--frost-color);
+            border: 2px solid var(--frost-color);
+            border-radius: 30px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(139, 211, 255, 0.5);
+        }
+        
+        .btn-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 211, 255, 0.3), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .btn-hero:hover {
+            background: rgba(139, 211, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(139, 211, 255, 0.7);
+        }
+        
+        .btn-hero:hover::before {
+            left: 100%;
+        }
+        
+        .btn-hero-primary {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.7);
+        }
+        
+        .btn-hero-primary:hover {
+            background: rgba(0, 180, 216, 0.8);
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .countdown-item {
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--frost-color);
+            text-shadow: 0 0 10px rgba(139, 211, 255, 0.7);
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
+        
+        /* Seções */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--frost-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Sobre o Servidor */
+        .about-section {
+            background: rgba(10, 10, 26, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        
+        .about-content {
+            background: rgba(5, 5, 16, 0.6);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .about-content:hover {
+            box-shadow: 0 15px 40px rgba(0, 180, 216, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .rates-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .rates-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: rgba(0, 180, 216, 0.1);
+            border-left: 3px solid var(--primary-color);
+            border-radius: 0 5px 5px 0;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .rates-list li:hover {
+            background: rgba(0, 180, 216, 0.2);
+            transform: translateX(10px);
+        }
+        
+        .rate-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .rate-value {
+            font-weight: 700;
+            color: var(--frost-color);
+            margin-left: 5px;
+        }
+        
+        /* Recursos */
+        .features-section {
+            background: url('https://wow.zamimg.com/uploads/screenshots/normal/604002-dalaran.jpg') center/cover fixed;
+            position: relative;
+        }
+        
+        .features-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(5, 5, 16, 0.9) 0%, rgba(10, 10, 26, 0.8) 100%);
+        }
+        
+        .feature-card {
+            background: rgba(5, 5, 16, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 180, 216, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--frost-color);
+        }
+        
+        .feature-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+        
+        /* Modal de Registro */
+        .modal-content {
+            background: linear-gradient(135deg, #0a0a1a, #050510);
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid rgba(0, 180, 216, 0.3);
+        }
+        
+        .modal-title {
+            font-family: 'Cinzel', serif;
+            color: var(--frost-color);
+        }
+        
+        .close {
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(0, 180, 216, 0.25);
+            color: white;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn-register {
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-register:hover {
+            background: var(--frost-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 211, 255, 0.4);
+        }
+        
+        /* Rodapé */
+        .footer {
+            background: linear-gradient(135deg, #050510, #0a0a1a);
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(0, 180, 216, 0.2);
+        }
+        
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--frost-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo span {
+            color: var(--accent-color);
+        }
+        
+        .footer-links h5 {
+            font-family: 'Cinzel', serif;
+            color: var(--frost-color);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--frost-color);
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        .copyright a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        /* Efeitos de animação */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 180, 216, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
 </head>
 <body>
-	<!-- banner -->
-	<div class="banner">
-		<div class="agileinfo-dot">
-			<div class="agileits-logo">
-				<h1><a href="index.html">STORM<span>CURSE</span> - 3.3.5a</a></h1>
-			</div>
+    <!-- Efeito de partículas de neve -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+    
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                STORMCURSE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/ZDV4zJfrQn" target="_blank">Discord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Banner Hero -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title animate__animated animate__fadeInDown">STORMCURSE</h1>
+            <p class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s">Aventure-se no Mundo de The Lich King 3.3.5a</p>
+            <p class="hero-highlight animate__animated animate__fadeIn animate__delay-1s">* ABERTURA DIA 10/05 ÁS 18 HORAS! *</p>
+            
+            <!-- Contador regressivo -->
+            <div class="countdown animate__animated animate__fadeIn animate__delay-2s">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Dias</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+            
+            <div class="animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#" class="btn-hero btn-hero-primary pulse" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    <i class="fas fa-user-plus me-2"></i>CRIAR CONTA
+                </a>
+                <a href="https://discord.gg/ZDV4zJfrQn" target="_blank" class="btn-hero">
+                    <i class="fab fa-discord me-2"></i>ENTRAR NO DISCORD
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sobre o Servidor -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">SOBRE O SERVIDOR</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Bem-vindo ao reino gélido de Northrend</p>
+            
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <p class="about-text">
+                            Bem-vindo ao <strong>StormCurse</strong>, um servidor dedicado à expansão clássica <strong>Wrath of the Lich King</strong> (WotLK). 
+                            Aqui, você reviverá os momentos épicos de Northrend, enfrentando os desafios gelados de Icecrown Citadel, 
+                            as batalhas intensas em Ulduar e os confrontos lendários contra o próprio Lich King. 
+                            Nosso servidor oferece uma experiência autêntica e personalizada, com taxas de XP ajustadas 
+                            para equilibrar diversão e progressão, eventos exclusivos e uma comunidade ativa e acolhedora. 
+                            Junte-se a nós e escreva sua história em Azeroth!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="about-content">
+                        <h5 class="w3l-subtitle">- RATES -</h5>
+                        <ul class="rates-list">
+                            <li>
+                                <span class="rate-icon"><i class="fas fa-medal"></i></span>
+                                <div>
+                                    <b>Experiência (XP): </b><span class="rate-value">10x</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rate-icon"><i class="fas fa-hammer"></i></span>
+                                <div>
+                                    <b>Profissões: </b><span class="rate-value">4x</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rate-icon"><i class="fas fa-coins"></i></span>
+                                <div>
+                                    <b>Ouro: </b><span class="rate-value">4x</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rate-icon"><i class="fas fa-medal"></i></span>
+                                <div>
+                                    <b>Reputação: </b><span class="rate-value">4x</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recursos -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">RECURSOS DO SERVIDOR</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Descubra o que torna o StormCurse especial</p>
+            
+            <div class="row">
+                <!-- Recurso 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Progressão Balanceada</h3>
+                        <p class="feature-text">
+                            Taxas de XP, ouro e reputação ajustadas para garantir diversão e desafio. 
+                            Aventure-se em Northrend com equilíbrio e emoção!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Recurso 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Raides Clássicas</h3>
+                        <p class="feature-text">
+                            Enfrente os maiores desafios de WotLK, como Icecrown Citadel, Ulduar e Naxxramas, 
+                            com mecânicas fiéis ao original.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Recurso 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Eventos Personalizados</h3>
+                        <p class="feature-text">
+                            Participe de eventos exclusivos, como torneios PvP, caçadas épicas e festivais temáticos 
+                            que mantêm o jogo sempre fresco e emocionante.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Recurso 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Comunidade Ativa</h3>
+                        <p class="feature-text">
+                            Junte-se a uma comunidade amigável e engajada, pronta para ajudar e compartilhar aventuras. 
+                            Guilds ativas e um Discord vibrante esperam por você!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Recurso 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Suporte 24/7</h3>
+                        <p class="feature-text">
+                            Nossa equipe está sempre disponível para ajudar com qualquer problema ou dúvida. 
+                            Relatórios rápidos e soluções eficientes para garantir sua diversão.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Recurso 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="feature-title">Customizações Únicas</h3>
+                        <p class="feature-text">
+                            Desfrute de melhorias exclusivas, como sistemas de recompensas, lojas personalizadas, 
+                            montarias especiais e muito mais para enriquecer sua experiência.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="header-top">
-				<div class="container">
-					<div class="header-top-info">
-						<nav class="navbar navbar-default">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
+	<!-- Seção de Download -->
+<section class="section download-section" id="download">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">DOWNLOAD E CONFIGURAÇÃO</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Prepare-se para aventurar-se em Northrend</p>
+        
+        <div class="row">
+            <!-- Card de Download -->
+            <div class="col-lg-6 mb-4" data-aos="fade-right">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>DOWNLOAD DO CLIENTE</h3>
+                    <p>Baixe o cliente completo do Wrath of the Lich King 3.3.5a já configurado para o StormCurse.</p>
+                    <div class="download-info">
+                        <p><i class="fas fa-hdd me-2"></i> Tamanho: ~30GB</p>
+                        <p><i class="fas fa-calendar-alt me-2"></i> Versão: 3.3.5a (12340)</p>
+                    </div>
+                    <a href="https://mega.nz/file/cdhC1CQI#d_smn-R_HBx0BQBvPi4G01EmknZ6kPbS1nwLEx5YwqY" class="btn-download" target="_blank">
+                        <i class="fas fa-download me-2"></i> BAIXAR CLIENTE
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Card de Realmlist -->
+            <div class="col-lg-6 mb-4" data-aos="fade-left">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>CONFIGURAÇÃO DO REALMLIST</h3>
+                    <p>Após instalar o jogo, você precisará configurar o arquivo realmlist.wtf para conectar ao nosso servidor.</p>
+                    <div class="realmlist-box">
+                        <code>set realmlist logon-stormcurse.shop</code>
+                        <button class="btn-copy" onclick="copyRealmlist()">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                    <p class="small-text mt-3">Local do arquivo: <em>WoW-Pasta\Data\enUS\realmlist.wtf</em></p>
+                </div>
+            </div>
+            
+            <!-- Card de Instruções -->
+            <div class="col-lg-12 mt-4" data-aos="fade-up">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>INSTRUÇÕES DE INSTALAÇÃO</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Baixe o cliente completo</h4>
+                                <p>Clique no botão de download acima para obter o cliente do jogo.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Extraia os arquivos</h4>
+                                <p>Use um programa como WinRAR ou 7-Zip para extrair o conteúdo para uma pasta de sua preferência.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Configure o realmlist</h4>
+                                <p>Edite o arquivo realmlist.wtf conforme instruído acima ou use o botão de copiar.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Execute o jogo</h4>
+                                <p>Inicie o WoW.exe e faça login com a conta que você criou no site.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-								<nav>
-									<ul class="nav navbar-nav">
-										<li class="active"><a href="index.html">INICIO</a></li>
-										<li><a href="https://discord.gg/ZDV4zJfrQn">DISCORD</a></li>
-										<li><a href="https://mega.nz/file/cdhC1CQI#d_smn-R_HBx0BQBvPi4G01EmknZ6kPbS1nwLEx5YwqY">BAIXAR JOGO</a></li>
-									</ul>
-								</nav>
-							</div>
-							<!-- /.navbar-collapse -->
-						</nav>
-					</div>
-				</div>
-			</div>
-			<div class="w3layouts-banner-info">
-				<div class="container">
-					<div class="w3layouts-banner-slider">
-						<div class="w3layouts-banner-top-slider">
-							<div class="slider">
-								<div class="callbacks_container">
-									<ul class="rslides callbacks callbacks1" id="slider4">
-										<li>
-											<div class="banner_text">
-												
-												<h3>NOVA AVENTURA</h3>
-												<p>UMA NOVA HISTORIA ESTÁ POR VIR - REGISTRE-SE!</p>
-												<p><b>* ABERTURA DIA 10/05 ÁS 18 HORAS!</b></p>
-												<!-- Contador -->
-												
-												<!-- Fim do Contador -->
-												<div class="w3-button">
-													<a href="#" data-toggle="modal" data-target="#myModal"><b>CRIE SUA CONTA AGORA!</b></a>
-												</div>
-											</div>
-										</li>
-										
-									</ul>
-								</div>
-								<div class="clearfix"> </div>
-								<style>
-								.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-    font-family: 'Roboto', sans-serif;
-    color: #fff; /* Cor do texto */
-    font-size: 1.2em; /* Tamanho da fonte */
-}
-
-.countdown-item {
-    text-align: center;
-}
-
-.countdown-item span {
-    display: block;
-    font-size: 1.5em; /* Tamanho dos números */
-    font-weight: 300; /* Peso da fonte */
-    color: #fff; /* Cor dos números */
-}
-
-.countdown-label {
-    font-size: 0.8em; /* Tamanho dos rótulos */
-    color: rgba(255, 255, 255, 0.7); /* Cor dos rótulos (mais clara) */
-    text-transform: uppercase; /* Transforma em maiúsculas */
-    margin-top: 5px;
-}
-								</style>
-								<script>
-                                document.querySelector('.btn-primary').addEventListener('click', function() {
-    const fullName = document.getElementById('fullName').value;
-    const login = document.getElementById('login').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-
-    if (fullName === '' || login === '' || password === '' || confirmPassword === '') {
-        alert('Por favor, preencha todos os campos.');
-    } else if (password !== confirmPassword) {
-        alert('As senhas não coincidem.');
-    } else {
-        alert('Conta criada com sucesso!');
-        // Aqui você pode adicionar a lógica para enviar os dados para o servidor
+<style>
+    /* Estilos para a seção de download */
+    .download-section {
+        background: url('https://wow.zamimg.com/uploads/screenshots/normal/1050975.jpg') center/cover fixed;
+        position: relative;
     }
-});
+    
+    .download-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(8, 18, 32, 0.9) 0%, rgba(5, 12, 20, 0.8) 100%);
+    }
+    
+    .download-card {
+        background: rgba(5, 12, 20, 0.8);
+        border-radius: 10px;
+        padding: 30px;
+        height: 100%;
+        border: 1px solid rgba(0, 168, 255, 0.2);
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .download-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 168, 255, 0.2);
+        border-color: var(--accent-color);
+    }
+    
+    .download-icon {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+    }
+    
+    .download-card h3 {
+        font-family: 'Cinzel', serif;
+        color: var(--frost-color);
+        margin-bottom: 15px;
+    }
+    
+    .download-info {
+        background: rgba(0, 168, 255, 0.1);
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    
+    .download-info p {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .btn-download {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--accent-color);
+        color: var(--darker-color);
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .btn-download:hover {
+        background: var(--frost-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(168, 230, 255, 0.4);
+    }
+    
+    .realmlist-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 168, 255, 0.5);
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+        position: relative;
+        font-family: monospace;
+    }
+    
+    .btn-copy {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 168, 255, 0.2);
+        border: none;
+        color: var(--frost-color);
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-copy:hover {
+        background: var(--accent-color);
+        color: var(--darker-color);
+    }
+    
+    .small-text {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .steps {
+        margin-top: 20px;
+    }
+    
+    .step {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+    
+    .step-number {
+        background: var(--accent-color);
+        color: var(--darker-color);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .step-content h4 {
+        color: var(--frost-color);
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+</style>
 
-									// Data de inauguração: 12 de abril de 2025 às 19:00
-									const inaugurationDate = new Date("April 12, 2025 19:00:00").getTime();
-								
-									function updateCountdown() {
-										const now = new Date().getTime();
-										const timeLeft = inaugurationDate - now;
-								
-										// Cálculos para dias, horas, minutos e segundos
-										const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-										const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-										const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-										const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-								
-										// Atualiza os valores no HTML
-										document.getElementById("days").innerText = String(days).padStart(2, "0");
-										document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-										document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-										document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
-								
-										// Se o tempo acabar, exibe uma mensagem
-										if (timeLeft < 0) {
-											clearInterval(countdownInterval);
-											document.querySelector(".countdown").innerHTML = "<h3>A aventura começou!</h3>";
-										}
-									}
-								
-									// Atualiza o contador a cada segundo
-									const countdownInterval = setInterval(updateCountdown, 1000);
-									updateCountdown(); // Executa imediatamente para evitar atraso inicial
-								</script>
-								<script src="js/responsiveslides.min.js"></script>
-								<script>
-									// You can also use "$(window).load(function() {"
-									$(function () {
-									  // Slideshow 4
-									  $("#slider4").responsiveSlides({
-										auto: true,
-										pager:true,
-										nav:true,
-										speed: 500,
-										namespace: "callbacks",
-										before: function () {
-										  $('.events').append("<li>before event fired.</li>");
-										},
-										after: function () {
-										  $('.events').append("<li>after event fired.</li>");
-										}
-									  });
-								
-									});
-								 </script>
-								 <script>
-									$(document).ready(function() {
-    // Quando o modal é fechado, limpa o formulário
-    $('#myModal').on('hidden.bs.modal', function() {
-        // Reseta o formulário
-        $('#register-form')[0].reset();
-
-        // Limpa a mensagem de status
-        $('#status-message').html('');
-    });
-
-    // Envio do formulário via AJAX
-    $('#register-form').on('submit', function(event) {
-        event.preventDefault(); // Impede o envio normal do formulário
-
-        // Cria um objeto FormData com os dados do formulário
-        var formData = $(this).serialize();
-
-        // Envia o formulário para o PHP via AJAX
-        $.ajax({
-            url: 'https://tempest-wow.shop/reg.php', // Caminho completo para o PHP
-            type: 'POST',                                 // Método de envio
-            data: formData,                               // Dados do formulário
-            success: function(response) {
-                // Mostra a resposta do servidor no site
-                $('#status-message').html('<div class="alert alert-success">' + response + '</div>');
-
-                // Exibe uma mensagem de sucesso com SweetAlert2
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Conta criada com sucesso!',
-                    text: response,
-                    confirmButtonText: 'OK'
-                }).then(() => {
-                    // Fecha o modal após o usuário clicar em "OK"
-                    $('#myModal').modal('hide');
-                });
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                // Exibe os erros diretamente no site
-                let errorDetails = `
-                    <strong>Erro na requisição AJAX:</strong><br>
-                    <strong>Status:</strong> ${textStatus}<br>
-                    <strong>Mensagem de erro:</strong> ${errorThrown}<br>
-                    <strong>Resposta do servidor:</strong> ${jqXHR.responseText || 'Nenhuma resposta recebida.'}
-                `;
-
-                $('#status-message').html('<div class="alert alert-danger">' + errorDetails + '</div>');
-
-                // Exibe uma mensagem de erro com SweetAlert2
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Erro',
-                    text: jqXHR.responseText || 'Ocorreu um erro ao enviar os dados. Tente novamente.',
-                    confirmButtonText: 'OK'
-                }).then(() => {
-                    // Fecha o modal após o usuário clicar em "OK"
-                    $('#myModal').modal('hide');
-                });
+<script>
+    // Função para copiar o realmlist
+    function copyRealmlist() {
+        const realmlist = "set realmlist logon-stormcurse.shop";
+        navigator.clipboard.writeText(realmlist).then(() => {
+            // Mostra mensagem de sucesso
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            
+            Toast.fire({
+                icon: 'success',
+                title: 'Realmlist copiado!'
+            })
+        });
+    }
+</script>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo">STORMCURSE</div>
+                    <p>O melhor servidor brasileiro de World of Warcraft: Wrath of the Lich King 3.3.5a.</p>
+                    <div class="social-icons">
+                        <a href="https://discord.gg/ZDV4zJfrQn" class="social-icon"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Links Rápidos</h5>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#features">Recursos</a></li>
+							<li><a href="#download">Download</a></li>
+                            <li><a href="https://discord.gg/ZDV4zJfrQn" target="_blank">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Downloads</h5>
+                        <ul>
+                            <li><a href="https://mega.nz/file/cdhC1CQI#d_smn-R_HBx0BQBvPi4G01EmknZ6kPbS1nwLEx5YwqY" target="_blank">Cliente do Jogo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h5>Contato</h5>
+                        <ul>
+                            <li><i class="fas fa-envelope me-2"></i> contato@stormcurse.com</li>
+                            <li><i class="fab fa-discord me-2"></i> https://discord.gg/ZDV4zJfrQn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="footer-class">© 2025 STORMCURSE . Todos os direitos Reservados | Design by <a href="#" target="_blank">Rodrigoolv</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal de Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">CRIAR CONTA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Nome de Usuário</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirmar Senha</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-register">CRIAR CONTA</button>
+                </form>
+                <div id="statusMessage" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Inicializa AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Efeito de neve
+        document.addEventListener('DOMContentLoaded', function() {
+            const snowflakes = document.querySelector('.snowflakes');
+            const snowflakeCount = 50;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '❅';
+                
+                // Posição aleatória
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.top = Math.random() * 100 + 'vh';
+                
+                // Tamanho aleatório
+                const size = Math.random() * 0.8 + 0.4;
+                snowflake.style.fontSize = size + 'em';
+                
+                // Animação aleatória
+                const animationDuration = Math.random() * 10 + 5;
+                snowflake.style.animation = `fall ${animationDuration}s linear infinite`;
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                
+                // Adiciona ao container
+                snowflakes.appendChild(snowflake);
+            }
+            
+            // Adiciona estilos dinâmicos para a animação de queda
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fall {
+                    to {
+                        transform: translateY(100vh) rotate(360deg);
+                    }
+                }
+                
+                .snowflake {
+                    position: absolute;
+                    color: white;
+                    opacity: ${Math.random() * 0.5 + 0.5};
+                    pointer-events: none;
+                    z-index: 1000;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
         });
-    });
-});
-									</script>
-								<!--banner Slider starts Here-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        
+        // Contador regressivo
+        const inaugurationDate = new Date("May 10, 2025 18:00:00").getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = inaugurationDate - now;
+            
+            // Cálculos para dias, horas, minutos e segundos
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            // Atualiza os valores no HTML
+            document.getElementById("days").innerText = String(days).padStart(2, "0");
+            document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+            
+            // Se o tempo acabar, exibe uma mensagem
+            if (timeLeft < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".countdown").innerHTML = "<h3 style='color: var(--frost-color);'>O servidor está online! Junte-se a nós!</h3>";
+            }
+        }
+        
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Executa imediatamente para evitar atraso inicial
+        
+        // SweetAlert2 de boas-vindas
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                title: '🎉 <strong>Promoção Especial!</strong> 🎉',
+                html: 'As primeiras <strong>300 contas</strong> criadas receberão:<br>' +
+                      '🐴 <strong>Montaria Terrestre/Fly</strong><br>' +
+                      '🚀 <strong>Buraco Portátil (Bag)</strong><br>' +
+					  '🚀 <strong>Tier 8 Gratuito</strong><br><br>' +
+                      'Não perca essa chance! Crie sua conta agora e garanta seus presentes!',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Criar Conta 🚀',
+                cancelButtonText: 'Fechar ❌',
+                confirmButtonColor: '#ff9e00',
+                cancelButtonColor: '#dc3545',
+                background: '#0a0a1a',
+                color: '#fff',
+                customClass: {
+                    popup: 'custom-popup',
+                    title: 'custom-title',
+                    htmlContainer: 'custom-html',
+                    confirmButton: 'custom-confirm-button',
+                    cancelButton: 'custom-cancel-button'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+                    registerModal.show();
+                }
+            });
+        });
+        
+        
+    </script>
 	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			Swal.fire({
-				title: '🎉 <strong>Promoção Especial!</strong> 🎉',
-				html: 'As primeiras <strong>300 contas</strong> criadas receberão:<br>' +
-					  '🐴 <strong>Montaria Terrestre/Fly</strong><br>' +
-					  '🚀 <strong>Buraco Portátil (Bag)</strong><br><br>' +
-					  'Não perca essa chance! Crie sua conta agora e garanta seus presentes!',
-				icon: 'info',
-				showCancelButton: true, // Adiciona o botão "Fechar"
-				confirmButtonText: 'Criar Conta 🚀',
-				cancelButtonText: 'Fechar ❌',
-				confirmButtonColor: '#ffcc00',
-				cancelButtonColor: '#dc3545', // Cor vermelha para o botão "Fechar"
-				background: '#1e1e2f',
-				color: '#fff',
-				customClass: {
-					popup: 'custom-popup',
-					title: 'custom-title',
-					htmlContainer: 'custom-html',
-					confirmButton: 'custom-confirm-button',
-					cancelButton: 'custom-cancel-button' // Classe personalizada para o botão "Fechar"
-				}
-			}).then((result) => {
-				if (result.isConfirmed) {
-					// Redireciona para o modal de criação de conta
-					$('#myModal').modal('show');
-				} else if (result.dismiss === Swal.DismissReason.cancel) {
-					
-				}
-			});
-		});
-	</script>
-	<style>
-		.custom-popup {
-			border-radius: 15px;
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-			background: linear-gradient(135deg, #1e1e2f, #2c2c4a);
-		}
-	
-		.custom-title {
-			font-size: 24px;
-			color: #ffcc00;
-			text-transform: uppercase;
-		}
-	
-		.custom-html {
-			font-size: 16px;
-			color: #ddd;
-		}
-	
-		.custom-confirm-button {
-			font-size: 18px;
-			font-weight: bold;
-			text-transform: uppercase;
-			transition: all 0.3s ease;
-		}
-	
-		.custom-confirm-button:hover {
-			background-color: #ff9900 !important;
-			transform: translateY(-2px);
-			box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
-		}
-	
-		.custom-cancel-button {
-			font-size: 18px;
-			font-weight: bold;
-			text-transform: uppercase;
-			transition: all 0.3s ease;
-		}
-	
-		.custom-cancel-button:hover {
-			background-color: #c82333 !important; /* Vermelho mais escuro ao passar o mouse */
-			transform: translateY(-2px);
-			box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
-		}
-	</style>
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="myModalLabel">Criar Conta</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form id="register-form">
-						<div class="row">
-							<div class="col-md-12">
-								<fieldset>
-									<input name="full-name" type="text" class="form-control" id="full-name" placeholder="Nome Completo" required>
-								</fieldset>
-							</div>
-							<div class="col-md-12">
-								<fieldset>
-									<input name="username" type="text" class="form-control" id="username" placeholder="Usuário" required>
-								</fieldset>
-							</div>
-							<div class="col-md-12">
-								<fieldset>
-									<input name="password" type="password" class="form-control" id="password" placeholder="Senha" required>
-								</fieldset>
-							</div>
-							<div class="col-md-12">
-								<fieldset>
-									<input name="confirm-password" type="password" class="form-control" id="confirm-password" placeholder="Confirmar Senha" required>
-								</fieldset>
-							</div>
-							<div class="col-md-12">
-								<fieldset>
-									<button type="submit" id="form-submit" class="button">Criar Conta</button>
-								</fieldset>
-							</div>
-						</div>
-					</form>
-					
-					<!-- Área para exibir mensagens de status -->
-					<div id="status-message"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<style>
-
-	/* Estilo do Modal */
-.modal-content {
-    background: linear-gradient(135deg, #1e1e2f, #2c2c4a);
-    color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.modal-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* Cabeçalho do Modal */
-.modal-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px;
-}
-
-.modal-title {
-    color: #ffcc00;
-    font-weight: bold;
-    font-size: 24px;
-    text-transform: uppercase;
-}
-
-/* Botão de fechar */
-.modal-header .close {
-    color: #fff;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.modal-header .close:hover {
-    opacity: 1;
-}
-
-/* Corpo do Modal */
-.modal-body {
-    padding: 20px;
-}
-
-/* Campos do Formulário */
-.modal-body .form-control {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-}
-
-.modal-body .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: #ffcc00;
-    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
-    outline: none;
-}
-
-/* Placeholder dos campos */
-.modal-body .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Botão de Criar Conta */
-.modal-body .button {
-    background-color: #ffcc00;
-    border: none;
-    color: #1e1e2f;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
-.modal-body .button:hover {
-    background-color: #ff9900;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255, 153, 0, 0.3);
-}
-
-/* Mensagens de Status */
-#status-message {
-    margin-top: 15px;
-}
-
-#status-message .alert {
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 0;
-}
-
-#status-message .alert-info {
-    background-color: rgba(0, 123, 255, 0.1);
-    border: 1px solid rgba(0, 123, 255, 0.2);
-    color: #00bfff;
-}
-
-#status-message .alert-success {
-    background-color: rgba(40, 167, 69, 0.1);
-    border: 1px solid rgba(40, 167, 69, 0.2);
-    color: #28a745;
-}
-
-#status-message .alert-danger {
-    background-color: rgba(220, 53, 69, 0.1);
-    border: 1px solid rgba(220, 53, 69, 0.2);
-    color: #dc3545;
-}
-/* Animação ao abrir o modal */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.modal.fade .modal-dialog {
-    animation: fadeIn 0.3s ease-out;
-}
-.w3-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: transparent;
-    color: #00ffff; /* Azul neon */
-    border: 2px solid #00ffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 
-        0 0 5px #00ffff, 
-        0 0 10px #00ffff, 
-        0 0 20px #00ffff;
-}
-
-.w3-button a:hover {
-    background: #00ffff;
-    color: #1e1e2f;
-    box-shadow: 
-        0 0 10px #00ffff, 
-        0 0 20px #00ffff, 
-        0 0 40px #00ffff;
-    transform: translateY(-5px);
-}
-
-		html {
-    scroll-behavior: smooth;
-}
-.footer-class a {
-    color: #ffcc00;
-    transition: color 0.3s ease;
-}
-
-.footer-class a:hover {
-    color: #ff9900;
-}
-.modal-content {
-    background: linear-gradient(135deg, #1e1e2f, #2c2c4a);
-    color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.modal-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-}
-.rates-list li {
-
-    transition: background-color 0.3s ease;
-}
-
-.rates-list li:hover {
-    background-color: rgba(255, 204, 0, 0.1);
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Adicione isso ao seu arquivo CSS */
-/* Estilo da barra de rolagem */
-::-webkit-scrollbar {
-    width: 8px; /* Largura da barra de rolagem */
-}
-
-/* Fundo da barra de rolagem */
-::-webkit-scrollbar-track {
-    background: #1e1e2f; /* Cor de fundo */
-    border-radius: 10px;
-}
-
-/* Barra de rolagem em si */
-::-webkit-scrollbar-thumb {
-    background: #00ffff; /* Azul neon */
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
-}
-
-/* Efeito hover na barra de rolagem */
-::-webkit-scrollbar-thumb:hover {
-    background: #00bfff; /* Azul neon mais claro */
-    box-shadow: 0 0 10px rgba(0, 191, 255, 0.9);
-}
-.w3-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: transparent;
-    color: #00ffff; /* Azul neon */
-    border: 2px solid #00ffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 
-        0 0 5px #00ffff, 
-        0 0 10px #00ffff, 
-        0 0 20px #00ffff;
-}
-
-.w3-button a:hover {
-    background: #00ffff;
-    color: #1e1e2f;
-    box-shadow: 
-        0 0 10px #00ffff, 
-        0 0 20px #00ffff, 
-        0 0 40px #00ffff;
-    transform: translateY(-5px);
-}
-
-	</style>
-	<!-- //banner -->
-	<!-- about -->
-	<div class="about" id="about"> 
-		<div class="container"> 
-			<div class="welcome">
-				<div class="agileits-title"> 
-					<h2>SOBRE O SERVIDOR</h2>
-<p>Bem-vindo ao <strong>StormCurse</strong>, um servidor dedicado à expansão clássica <strong>Wrath of the Lich King</strong> (WotLK). Aqui, você reviverá os momentos épicos de Northrend, enfrentando os desafios gelados de Icecrown Citadel, as batalhas intensas em Ulduar e os confrontos lendários contra o próprio Lich King. Nosso servidor oferece uma experiência autêntica e personalizada, com taxas de XP ajustadas para equilibrar diversão e progressão, eventos exclusivos e uma comunidade ativa e acolhedora. Junte-se a nós e escreva sua história em Azeroth!</p>
-				</div>
-			</div>
-			<div class="about-w3lsrow">
-				<div class="col-md-7 col-sm-7 w3about-img">
-					<div class="w3about-text">
-						<h5 class="w3l-subtitle">- RATES -</h5>
-						<ul class="rates-list">
-							<li><span class="rate-icon">⚔️</span><b>Experiência (XP): </b><strong>10x</strong></li>
-							<li><span class="rate-icon">🎁</span><b>Profissões: </b><strong>4x</strong></li>
-							<li><span class="rate-icon">💰</span><b>Ouro: </b><strong>4x</strong></li>
-							<li><span class="rate-icon">🏆</span><b>Reputação: </b><strong>4x</strong></li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			
-			<style>
-				.about-w3lsrow {
-					background: linear-gradient(135deg, #1e1e2f, #2c2c4a);
-					padding: 30px;
-					border-radius: 15px;
-					box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-					color: #000000;
-					font-family: 'Arial', sans-serif;
-				}
-			
-				.w3l-subtitle {
-					font-size: 24px;
-					font-weight: bold;
-					color: #ffcc00;
-					text-transform: uppercase;
-					margin-bottom: 15px;
-				}
-			
-				.w3about-text p {
-					font-size: 16px;
-					line-height: 1.6;
-					color: #ddd;
-				}
-			
-				.rates-list {
-					list-style: none;
-					padding: 0;
-					margin-top: 20px;
-				}
-			
-				.rates-list li {
-					font-size: 18px;
-					margin-bottom: 10px;
-					display: flex;
-					align-items: center;
-				}
-			
-				.rate-icon {
-					font-size: 20px;
-					margin-right: 10px;
-				}
-			
-				.rates-list strong {
-					color: #ffcc00;
-					margin-left: 5px;
-				}
-			
-			
-				.clearfix {
-					clear: both;
-				}
-			</style>
-		</div>
-	</div>
-	<!-- //about --> 
-	<!-- markets -->
-	<div class="markets" id="markets">
-		<div class="container">
-			<div class="agileits-title"> 
-				<h3>Recursos do StormCurse</h3>
-				<p>Descubra os recursos exclusivos que o StormCurse oferece para uma experiência épica em Wrath of the Lich King!</p>
-			</div>
-			<div class="markets-grids">
-				<!-- Recurso 1: Progressão Balanceada -->
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-line-chart" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-							<h5>Progressão Balanceada</h5>
-							<p>Taxas de XP, ouro e reputação ajustadas para garantir diversão e desafio. Aventure-se em Northrend com equilíbrio e emoção!</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-	
-				<!-- Recurso 2: Raides Clássicas -->
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-shield" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-							<h5>Raides Clássicas</h5>
-							<p>Enfrente os maiores desafios de WotLK, como Icecrown Citadel, Ulduar e Naxxramas, com mecânicas fiéis ao original.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-	
-				<!-- Recurso 3: Eventos Personalizados -->
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-							<h5>Eventos Personalizados</h5>
-							<p>Participe de eventos exclusivos, como PvP tournaments, caçadas épicas e festivais temáticos.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-	
-				<!-- Recurso 4: Comunidade Ativa -->
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-users" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-							<h5>Comunidade Ativa</h5>
-							<p>Junte-se a uma comunidade amigável e engajada, pronta para ajudar e compartilhar aventuras.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-	
-				<!-- Recurso 5: Suporte 24/7 -->
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-headphones" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-							<h5>Suporte 24/7</h5>
-							<p>Nossa equipe está sempre disponível para ajudar com qualquer problema ou dúvida.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-	
-				<!-- Recurso 6: Customizações Únicas -->
-				<div class="col-md-4 w3ls-markets-grid">
-					<div class="agileits-icon-grid">
-						<div class="icon-left">
-							<i class="fa fa-cogs" aria-hidden="true"></i>
-						</div>
-						<div class="icon-right">
-							<h5>Customizações Únicas</h5>
-							<p>Desfrute de melhorias exclusivas, como sistemas de recompensas, lojas personalizadas e muito mais.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-	
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- //markets -->
-	<!-- portfolio -->
-	
-	<!-- //portfolio -->
-	
-	<!-- //modal -->
-	
-	<!-- //testimonial -->
-	
-	
-	
-	<!-- //footer --> 
-	<!-- copyright -->
-	<div class="copyright">
-		<div class="container">
-			<p class="footer-class">© 2025 STORMCURSE . Todos os direitos Reservados | Design by  <a href="#" target="_blank">Rodrigoolv</a> </p>
-		</div>
-	</div>
-	<!-- //copyright -->
-	<script src="js/jarallax.js"></script>
-	<!-- <script src="js/SmoothScroll.min.js"></script> -->
-	<script type="text/javascript">
-		/* init Jarallax */
-		$('.jarallax').jarallax({
-			speed: 0.5,
-			imgWidth: 1366,
-			imgHeight: 768
-		})
-	</script>
-	<script src="js/responsiveslides.min.js"></script>
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-	<!-- //here ends scrolling icon -->
-	<!-- Tabs-JavaScript -->
-	<script src="js/jquery.filterizr.js"></script>
-		<script src="js/controls.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				$('.filtr-container').filterizr();
-			});
-		</script>
-	<!-- //Tabs-JavaScript -->
-	<!-- PopUp-Box-JavaScript -->
-		<script src="js/jquery.chocolat.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				$('.filtr-item a').Chocolat();
-			});
-		</script>
-	<!-- //PopUp-Box-JavaScript -->
-</body>	
+        // Quando o modal é fechado, limpa o formulário
+        $('#registerModal').on('hidden.bs.modal', function() {
+            $('#registerForm')[0].reset();
+            $('#statusMessage').html('');
+        });
+        
+        // Envio do formulário via AJAX
+        $('#registerForm').on('submit', function(event) {
+            event.preventDefault();
+            
+            // Verifica se as senhas coincidem
+            const password = $('#password').val();
+            const confirmPassword = $('#confirmPassword').val();
+            
+            if (password !== confirmPassword) {
+                $('#statusMessage').html('<div class="alert alert-danger">As senhas não coincidem!</div>');
+                return;
+            }
+        
+            // Desativa o botão para evitar múltiplos envios
+            $('.btn-register').prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Processando...');
+            
+            // Envia os dados para o reg.php
+            $.ajax({
+                url: 'https://tempest-wow.shop/reg.php',
+                type: 'POST',
+                data: {
+                    'username': $('#username').val(),
+                    'password': $('#password').val(),
+                    'confirm-password': $('#confirmPassword').val()
+                },
+                dataType: 'text',
+                success: function(response) {
+                    // Sucesso - mostra mensagem e fecha o modal após 2 segundos
+                    $('#statusMessage').html('<div class="alert alert-success">' + response + '</div>');
+                    
+                    Swal.fire({
+                        title: 'Sucesso!',
+                        text: response,
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#ff9e00',
+                        background: '#0a0a1a',
+                        color: '#fff'
+                    }).then(() => {
+                        var registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+                        registerModal.hide();
+                    });
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    // Trata erros de CORS primeiro
+                    if (textStatus === 'error' && errorThrown === '') {
+                        $('#statusMessage').html('<div class="alert alert-danger">Erro de CORS: Não foi possível conectar ao servidor.</div>');
+                        Swal.fire({
+                            title: 'Erro de Conexão',
+                            text: 'Não foi possível conectar ao servidor. Verifique sua conexão ou tente novamente mais tarde.',
+                            icon: 'error',
+                            confirmButtonText: 'OK',
+                            confirmButtonColor: '#ff9e00',
+                            background: '#0a0a1a',
+                            color: '#fff'
+                        });
+                        return;
+                    }
+                    
+                    // Outros erros
+                    let errorMsg = jqXHR.responseText || 'Erro desconhecido ao processar a requisição';
+                    $('#statusMessage').html('<div class="alert alert-danger">' + errorMsg + '</div>');
+                    
+                    Swal.fire({
+                        title: 'Erro',
+                        text: errorMsg,
+                        icon: 'error',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#ff9e00',
+                        background: '#0a0a1a',
+                        color: '#fff'
+                    });
+                },
+                complete: function() {
+                    // Reativa o botão
+                    $('.btn-register').prop('disabled', false).html('CRIAR CONTA');
+                }
+            });
+        });
+        </script>
+</body>
 </html>
