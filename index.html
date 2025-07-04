@@ -2,788 +2,311 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Legacy - WotLK</title>
-  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABVklEQVRYw+2XzU7CQBCGZ0tBxNgLvQHxQvQIPoEX4gF8Ql/AxMQYQ1p+LD9aCqX8dGfLdLt0d7sU0MRLJp3Z7nzzzcw0CxKJRCKRSCQSiUQikUgkEonkj8FmF2stWq0WBoMB+v0+PM8D5xwAkGUZkiTBdDpFHMfIsgyMMbRaLfi+j06nA9d1wRiDMcbKxN1uF4PBAL7vV3rGcRz0ej0Mh0M4jlPpGd/3MRwO0e12Kz3T7/cxGo3Q6XQqPTMajTAcDmGMqfSMtRaLxQKz2Qzr9RrWWmRZhvV6jdlshsVigSzLwBiD4zjodrvo9XpwXRd5niPPc5RlWQYpJdI0xWazQZqmUEqBMQYpJbTW2G63SJIEUkpwzqG1Rpqm2Gw2SNMUSikwxiCEqG5AKYUoijCfz7HdbqGUghACu90OURRhPp9DKQXGGLTWiKII8/kc2+0WSikIIeA4TnUDWmuEYYjpdIooiqC1hhACcRxjOp0iDENorcEYg9YaYRhiOp0iiiJorSGEQKPRqG5Aa40gCDAej7FcLqG1Buccq9UK4/EYQRBAa40iWmsEQYDxeIzVagWtNTjnqNfr1Q0U1VpjvV5jMplgtVpBa40gCDCZTLBer6G1Lt9XSiEIAkwmE6zXa2itwTmH7/vVDRQoKRFHEZbLJZRSWC6XiOMYUsrSfQClFOI4xnK5hFIKcRwjjuPqBqSUmM1meHt7w3Q6xW63w/v7O15fX/Hy8oLHx0c8PT3h5eUFz8/PeHp6wuPjI15fX/H29obJZILdbofPz0/M5/PqBpRSeHh4wM3NDW5vb/Hw8IC7uzvc3t7i+voaV1dXuLq6wvX1NW5ubnB3d4e7uzvc39/j/v4eDw8PeHx8xNPTE15fX6sb0Frj8/MTr6+veH5+xsfHB97f3/Hx8YG3tze8vLzg+fkZ7+/v+Pz8xMfHB97e3vDx8YGPjw8sl0sEQYDZbFbdgJQS0+kUz8/PeHp6QhiGmM/nWCwWWCwWCMMQ8/kcYRhiPp9jsVhgOp0iDENMJhNMJhPMZjMsl0t8fX1VN6C1RhRFmEwmGI/HGI/HeHp6wtPTE8bjMZ6fn/H4+Iinpyc8Pj7i+fm5vFfEeDzGy8sL3t7eqhv4Bm8rF/0fz8dNAAAAAElFTkSuQmCC" type="image/x-icon" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- SweetAlert2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Lich King Legacy 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-    :root {
-      --primary: #0a3d62;
-      --secondary: #6a89cc;
-      --accent: #f6b93b;
-      --dark: #0c2461;
-      --light: #f7f1e3;
-      --danger: #e55039;
-    }
-    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
+    html,
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: #000;
-      color: var(--light);
-      overflow-x: hidden;
-      position: relative;
-      min-height: 100vh;
-    }
-    
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
       height: 100%;
-      background: url('') no-repeat center center/cover;
-      opacity: 0.2;
-      z-index: -2;
+      font-family: 'Orbitron', sans-serif;
+      overflow: hidden;
+      background: #000;
     }
 
-    /* Vídeo de fundo melhorado */
-    .video-background {
+    .background-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+      background: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/a6/A6R806U7HJTN1650384185893.png')
+        no-repeat center center;
+      background-size: cover;
+      z-index: -2;
+      transition: transform 0.1s ease-out;
+      filter: brightness(0.6);
+    }
+
+    .dark-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -3;
-      overflow: hidden;
-    }
-    
-    .video-background iframe {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.4) contrast(1.2);
-    }
-    
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(10, 30, 60, 0.9) 0%, rgba(10, 30, 60, 0.7) 100%);
+      background: rgba(0, 0, 0, 0.75);
       z-index: -1;
     }
 
-    /* Efeito pulsante melhorado */
-    .pulsating {
-      animation: pulse 2s infinite ease-in-out;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); text-shadow: 0 0 5px rgba(246, 185, 59, 0.5); }
-      50% { transform: scale(1.05); text-shadow: 0 0 20px rgba(246, 185, 59, 0.8); }
-      100% { transform: scale(1); text-shadow: 0 0 5px rgba(246, 185, 59, 0.5); }
-    }
-    
-    /* Navbar melhorada */
-    .navbar {
-      background: linear-gradient(to right, rgba(10, 30, 60, 0.95), rgba(10, 30, 60, 0.85));
-      backdrop-filter: blur(10px);
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(246, 185, 59, 0.3);
-    }
-    
-    .navbar-brand {
-      font-family: 'Cinzel', serif;
-      font-weight: 700;
-      color: var(--accent);
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
-    
-    .navbar-nav .nav-link {
-      color: var(--light);
-      font-weight: 500;
-      padding: 8px 15px;
-      margin: 0 5px;
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
-    
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-      color: var(--accent);
-      background: rgba(106, 137, 204, 0.2);
-    }
-    
-    .navbar-toggler {
-      border: none;
-      color: var(--accent);
-    }
-    
-    /* Seção principal */
-    #countdown {
-      min-height: 100vh;
+    .modal {
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-    }
-    
-    .main-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px;
-      background: rgba(12, 36, 97, 0.6);
-      border-radius: 15px;
-      border: 1px solid rgba(246, 185, 59, 0.3);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-    
-    .main-title {
-      font-family: 'Cinzel', serif;
-      font-size: 3.5rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(246, 185, 59, 0.7);
-    }
-    
-    .lead-text {
-      font-size: 1.4rem;
-      margin-bottom: 30px;
-      color: #e0e0e0;
-    }
-    
-    .release-date {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
-    /* Timer melhorado */
-    #timer {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 30px 0;
-      flex-wrap: wrap;
-    }
-    
-    .time-unit {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 15px;
-      border-radius: 10px;
-      min-width: 90px;
-      border: 1px solid rgba(246, 185, 59, 0.3);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-    
-    .time-value {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--accent);
-      font-family: 'Cinzel', serif;
-    }
-    
-    .time-label {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #ccc;
-    }
-    
-    .btn-primary {
-      background: linear-gradient(to right, var(--accent), #e67e22);
-      border: none;
-      padding: 12px 35px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: all 0.3s;
-      box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
-      margin-top: 20px;
-    }
-    
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(230, 126, 34, 0.6);
-      background: linear-gradient(to right, #f6b93b, #e67e22);
-    }
-    
-    /* Seções de conteúdo */
-    section {
-      padding: 80px 0;
-    }
-    
-    .section-title {
-      font-family: 'Cinzel', serif;
-      text-align: center;
-      margin-bottom: 50px;
-      color: var(--accent);
-      position: relative;
-      padding-bottom: 15px;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 3px;
-      background: var(--accent);
-    }
-    
-    .card {
-      background: rgba(12, 36, 97, 0.6);
-      border: 1px solid rgba(246, 185, 59, 0.3);
-      border-radius: 10px;
-      color: #e0e0e0;
-      height: 100%;
-      transition: transform 0.3s;
-      backdrop-filter: blur(10px);
-    }
-    
-    .card:hover {
-      transform: translateY(-10px);
-      border-color: var(--accent);
-    }
-    
-    .card-header {
-      background: rgba(10, 30, 60, 0.7);
-      border-bottom: 1px solid rgba(246, 185, 59, 0.3);
-      padding: 15px 20px;
-      font-weight: 600;
-      color: var(--accent);
-    }
-    
-    .card-body {
+      height: 100vh;
+      width: 100%;
+      perspective: 1000px;
       padding: 20px;
     }
-    
-    .card ul {
-      padding-left: 20px;
-      margin-bottom: 0;
+
+    .modal-inner {
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease-out;
+      width: 100%;
+      max-width: 850px;
     }
-    
-    .card ul li {
-      margin-bottom: 8px;
-    }
-    
-    .feature-icon {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 15px;
-    }
-    
-    /* Rodapé */
-    footer {
-      background: linear-gradient(to right, var(--dark), #1e3799);
-      color: var(--light);
-      padding: 40px 0 20px;
-      border-top: 1px solid rgba(246, 185, 59, 0.3);
-    }
-    
-    .social-icons {
-      margin-bottom: 25px;
-    }
-    
-    .social-icons a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--accent);
-      border-radius: 50%;
-      font-size: 1.5rem;
-      margin: 0 10px;
-      transition: all 0.3s;
-    }
-    
-    .social-icons a:hover {
-      background: var(--accent);
-      color: var(--dark);
-      transform: translateY(-5px);
-    }
-    
-    .copyright {
-      color: #aaa;
-      font-size: 0.9rem;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 20px;
-    }
-    
-    /* Modal melhorado */
-    .modal-content {
-      background: linear-gradient(to bottom, var(--dark), #1e3799);
-      color: var(--light);
-      border: 1px solid var(--accent);
-      border-radius: 15px;
+
+    .modal-container {
+      border: 2px solid #ff7000;
+      border-radius: 14px;
+      box-shadow: 0 0 40px #ff7000cc;
+      background-color: rgba(15, 7, 0, 0.85);
       overflow: hidden;
+      backdrop-filter: blur(5px);
     }
-    
-    .modal-header {
-      background: rgba(10, 30, 60, 0.9);
-      border-bottom: 1px solid var(--accent);
-      padding: 15px 20px;
+
+    .modal-container img {
+      width: 100%;
+      display: block;
+      max-height: 560px;
+      object-fit: cover;
+      filter: drop-shadow(0 0 8px #ff7000);
     }
-    
-    .modal-title {
-      color: var(--accent);
-      font-family: 'Cinzel', serif;
-    }
-    
-    .btn-close {
-      filter: invert(1);
-    }
-    
-    .modal-body {
+
+    .modal-footer {
+      text-align: center;
+      background: #220f00dd;
       padding: 20px;
-    }
-    
-    .form-control {
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(106, 137, 204, 0.5);
-      color: var(--light);
-      padding: 10px 15px;
-      margin-bottom: 15px;
-    }
-    
-    .form-control:focus {
-      background: rgba(0, 0, 0, 0.4);
-      color: var(--light);
-      border-color: var(--accent);
-      box-shadow: 0 0 10px rgba(246, 185, 59, 0.3);
-    }
-    
-    .btn-success {
-      background: linear-gradient(to right, #27ae60, #2ecc71);
-      border: none;
-      padding: 10px;
+      position: relative;
+      color: #ff9a3d;
       font-weight: 600;
-      transition: all 0.3s;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 10px #ff7f00aa;
     }
-    
-    .btn-success:hover {
-      background: linear-gradient(to right, #2ecc71, #27ae60);
-      transform: translateY(-2px);
+
+    .enter-btn {
+      background: linear-gradient(90deg, #ff7f00, #ffae00);
+      color: white;
+      padding: 14px 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 25px #ff7f00;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2.5s infinite;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      user-select: none;
     }
-    
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .main-title {
-        font-size: 2.5rem;
+
+    .enter-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 45px #ffae00, 0 0 90px #ff7f00;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 20px #ff7f00;
       }
-      
-      .lead-text {
-        font-size: 1.1rem;
+      50% {
+        box-shadow: 0 0 40px #ff7f00, 0 0 70px #ffae00;
       }
-      
-      .time-value {
-        font-size: 1.8rem;
+      100% {
+        box-shadow: 0 0 20px #ff7f00;
       }
-      
-      .time-unit {
-        min-width: 70px;
+    }
+
+    .loading-message {
+      color: #ffae00;
+      font-size: 18px;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      display: none;
+      text-shadow: 0 0 8px #ff7f00aa;
+      line-height: 1.3;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: #331a00;
+      border: 1px solid #ffae00;
+      border-radius: 8px;
+      margin-top: 15px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #ff7f00, #ffae00);
+      animation: loadBar 10s forwards;
+      box-shadow: 0 0 15px #ffae00;
+      border-radius: 8px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
       }
-      
-      .navbar-brand {
-        font-size: 1.5rem;
+    }
+
+    @keyframes loadBar {
+      to {
+        width: 100%;
+      }
+    }
+
+    /* === BRASAS === */
+    .fire-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 120, 0, 0.8);
+      border-radius: 50%;
+      animation: fireMove 6s linear infinite;
+      animation-delay: calc(var(--i) * -0.5s);
+      left: calc(var(--i) * 5%);
+      top: 100%;
+      box-shadow: 0 0 10px rgba(255, 90, 0, 0.9);
+      filter: drop-shadow(0 0 6px #ff9000);
+    }
+
+    @keyframes fireMove {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-300px) scale(1.5);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-600px) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .enter-btn {
+        font-size: 16px;
+        padding: 12px 30px;
+      }
+      .modal-container img {
+        max-height: 340px;
+      }
+      .loading-message {
+        font-size: 15px;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Fundo -->
+  <div class="background-layer" id="backgroundLayer"></div>
+  <div class="dark-overlay"></div>
 
-  <!-- Vídeo de fundo YouTube -->
-  <div class="video-background">
-    <iframe src="https://www.youtube.com/embed/8MUc-rQD8j0?autoplay=1&mute=1&loop=1&playlist=8MUc-rQD8j0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Brasas -->
+  <div class="fire-container">
+    <div class="particle" style="--i:1"></div>
+    <div class="particle" style="--i:2"></div>
+    <div class="particle" style="--i:3"></div>
+    <div class="particle" style="--i:4"></div>
+    <div class="particle" style="--i:5"></div>
+    <div class="particle" style="--i:6"></div>
+    <div class="particle" style="--i:7"></div>
+    <div class="particle" style="--i:8"></div>
+    <div class="particle" style="--i:9"></div>
+    <div class="particle" style="--i:10"></div>
+    <div class="particle" style="--i:11"></div>
+    <div class="particle" style="--i:12"></div>
+    <div class="particle" style="--i:13"></div>
+    <div class="particle" style="--i:14"></div>
+    <div class="particle" style="--i:15"></div>
+    <div class="particle" style="--i:16"></div>
+    <div class="particle" style="--i:17"></div>
+    <div class="particle" style="--i:18"></div>
+    <div class="particle" style="--i:19"></div>
+    <div class="particle" style="--i:20"></div>
   </div>
-  <div class="overlay"></div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand pulsating" href="#"><i class="fas fa-crown me-2"></i>LEGACY</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#countdown">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#server-info">Informações</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Recursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#footer">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Seção Principal com Countdown -->
-  <section id="countdown">
-    <div class="container">
-      <div class="main-content">
-        <h1 class="main-title">WOTLK LEGACY</h1>
-        <p class="lead-text">O reino de Northrend aguarda por novos heróis! O lançamento será em:</p>
-        <p class="lead-text"><span class="release-date">15 de Julho de 2025 às 19:00</span></p>
-        
-        <div id="timer">
-          <div class="time-unit">
-            <div class="time-value" id="dias">00</div>
-            <div class="time-label">Dias</div>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-inner" id="modalInner">
+      <div class="modal-container">
+        <img
+          src="https://i.imgur.com/usJrSlp.png"
+          alt="Eventos Lich King Legacy"
+        />
+        <div class="modal-footer">
+          <button class="enter-btn" id="enterBtn" onclick="startLoading()">
+            ENTRAR NO SITE
+          </button>
+          <div class="loading-message" id="loadingMessage">
+            Você está prestes a entrar num mundo incrível,<br />
+            onde lembranças vão te envolver numa batalha épica.
           </div>
-          <div class="time-unit">
-            <div class="time-value" id="horas">00</div>
-            <div class="time-label">Horas</div>
-          </div>
-          <div class="time-unit">
-            <div class="time-value" id="minutos">00</div>
-            <div class="time-label">Minutos</div>
-          </div>
-          <div class="time-unit">
-            <div class="time-value" id="segundos">00</div>
-            <div class="time-label">Segundos</div>
-          </div>
-        </div>
-        
-        <!-- Corrija o botão de abertura do modal na seção principal -->
-<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
-  <i class="fas fa-user-plus me-2"></i>CRIAR CONTA AGORA
-</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Informações do Servidor -->
-  <section id="server-info" class="bg-dark">
-    <div class="container">
-      <h2 class="section-title">Informações do Servidor</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-header">
-              <i class="fas fa-tachometer-alt me-2"></i>Taxas do Servidor
-            </div>
-            <div class="card-body">
-              <ul>
-                <li>Honra: <span class="text-warning">x1</span></li>
-                <li>Arena: <span class="text-warning">x1</span></li>
-                <li>Profissão: <span class="text-warning">x2</span></li>
-                <li>Ouro: <span class="text-warning">x4</span></li>
-                <li>Experiência: <span class="text-warning">x4</span></li>
-                <li>Reputação: <span class="text-warning">x2</span></li>
-                <li>Missões: <span class="text-warning">x3</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-header">
-              <i class="fas fa-trophy me-2"></i>Realm First
-            </div>
-            <div class="card-body">
-              <p>Todos primeiros realmfirst de classe vai ganhar</p>
-              <ul>
-                <li>5k de Gold</li>
-                <li>Montaria: Raven Lord</li>
-                <li>O primeiro lvl 80 do servidor vai ganhar:</li>
-                <li>Pix de R$: 50,00</li>
-				<li>10k de Gold</li>
-				<li>Montaria: Celestial Steed</li>
-              </ul>
-            </div>
+          <div class="progress-bar" id="progressBar">
+            <div class="progress-fill"></div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Recursos do Servidor -->
-  <section id="features">
-    <div class="container">
-      <h2 class="section-title">Recursos Exclusivos</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h4>Sistema Anti-Ddos</h4>
-              <p>Proteção avançada contra ataques ddos.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <div class="feature-icon">
-                <i class="fas fa-sync-alt"></i>
-              </div>
-              <h4>Atualizações Constantes</h4>
-              <p>Correções diárias, balanceamentos semanais e conteúdo novo regularmente para manter a experiência fresca.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 text-center">
-            <div class="card-body">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <h4>Comunidade Ativa</h4>
-              <p>Moderação profissional e comunidade engajada pronta para receber novos membros e formar alianças.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rodapé com Redes Sociais -->
-  <footer id="footer">
-    <div class="container">
-      <div class="social-icons">
-        <a href="https://discord.gg/2MwcPjEXCN"><i class="fab fa-discord"></i></a>
-        <a href="https://www.youtube.com/@lichkinglegacy"><i class="fab fa-youtube"></i></a>
-        <a href="https://instagram.com/lichking_legacy"><i class="fab fa-instagram"></i></a>
-      </div>
-      <p class="copyright">&copy; 2025 LEGACY - Wrath of the Lich King. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-  <!-- Modal de Registro (substitua o existente) -->
-<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="registerModalLabel">CRIAR CONTA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="registerForm">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Nome de Usuário</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirmar Senha</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-lg w-100">CRIAR CONTA</button>
-                </form>
-                <div id="statusMessage" class="mt-3"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-// Quando o modal é fechado, limpa o formulário
-$('#registerModal').on('hidden.bs.modal', function() {
-    $('#registerForm')[0].reset();
-    $('#statusMessage').html('');
-});
-
-// Envio do formulário via AJAX
-$('#registerForm').on('submit', function(event) {
-    event.preventDefault();
-    
-    // Verifica se as senhas coincidem
-    const password = $('#password').val();
-    const confirmPassword = $('#confirmPassword').val();
-    
-    if (password !== confirmPassword) {
-        $('#statusMessage').html('<div class="alert alert-danger">As senhas não coincidem!</div>');
-        return;
-    }
-
-    // Desativa o botão para evitar múltiplos envios
-    const submitBtn = $(this).find('button[type="submit"]');
-    submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> PROCESSANDO...');
-    
-    // Envia os dados para o reg.php
-    $.ajax({
-        url: 'https://stormcurse.com.br/reg.php',
-        type: 'POST',
-        data: {
-            'username': $('#username').val(),
-            'password': $('#password').val(),
-            'confirm-password': $('#confirmPassword').val()
-        },
-        dataType: 'text',
-        success: function(response) {
-            // Sucesso - mostra mensagem e fecha o modal após 2 segundos
-            $('#statusMessage').html('<div class="alert alert-success">' + response + '</div>');
-            
-            Swal.fire({
-                title: 'Sucesso!',
-                text: response,
-                icon: 'success',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#f6b93b',
-                background: '#0a0a1a',
-                color: '#fff'
-            }).then(() => {
-                var registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
-                registerModal.hide();
-            });
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log('Erro AJAX:', jqXHR, textStatus, errorThrown); // Para debug
-            
-            // Trata erros de CORS primeiro
-            if (textStatus === 'error' && errorThrown === '') {
-                $('#statusMessage').html('<div class="alert alert-danger">Erro de CORS: Não foi possível conectar ao servidor.</div>');
-                Swal.fire({
-                    title: 'Erro de Conexão',
-                    text: 'Não foi possível conectar ao servidor. Verifique sua conexão ou tente novamente mais tarde.',
-                    icon: 'error',
-                    confirmButtonText: 'OK',
-                    confirmButtonColor: '#f6b93b',
-                    background: '#0a0a1a',
-                    color: '#fff'
-                });
-                return;
-            }
-            
-            // Outros erros
-            let errorMsg = jqXHR.responseText || 'Erro desconhecido ao processar a requisição';
-            $('#statusMessage').html('<div class="alert alert-danger">' + errorMsg + '</div>');
-            
-            Swal.fire({
-                title: 'Erro',
-                text: errorMsg,
-                icon: 'error',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#f6b93b',
-                background: '#0a0a1a',
-                color: '#fff'
-            });
-        },
-        complete: function() {
-            // Reativa o botão
-            submitBtn.prop('disabled', false).html('CRIAR CONTA');
-        }
-    });
-});
-</script>
-
-<style>
-  /* Modal de Registro */
-        .modal-content {
-            background: linear-gradient(135deg, #0a0a1a, #050510);
-            border: 1px solid var(--primary-color);
-            border-radius: 15px;
-            color: white;
-        }
-        
-        .modal-header {
-            border-bottom: 1px solid rgba(0, 180, 216, 0.3);
-        }
-        
-        .modal-title {
-            font-family: 'Cinzel', serif;
-            color: var(--frost-color);
-        }
-        
-        .close {
-            color: white;
-            opacity: 0.8;
-        }
-        
-        .form-control {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        
-        .form-control:focus {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(0, 180, 216, 0.25);
-            color: white;
-        }
-        
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        .btn-register {
-            background: var(--primary-color);
-            border: none;
-            color: white;
-            padding: 12px 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 30px;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-register:hover {
-            background: var(--frost-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 211, 255, 0.4);
-        }
-</style>
-
-
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS -->
   <script>
-    const targetDate = new Date('2025-07-15T20:00:00').getTime();
+    const modalInner = document.getElementById('modalInner');
+    const backgroundLayer = document.getElementById('backgroundLayer');
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * -20;
+      modalInner.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 
-      if (distance > 0) {
-        const dias = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const segundos = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
-        document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
-        document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
-        document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
-      } else {
-        document.getElementById("timer").innerHTML = '<h3 class="text-success">O SERVIDOR ESTÁ ONLINE!</h3>';
-      }
-    }
-
-    // Inicializar contador
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    // Suavizar rolagem para âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+      const moveX = (e.clientX / window.innerWidth - 0.5) * 30;
+      const moveY = (e.clientY / window.innerHeight - 0.5) * 30;
+      backgroundLayer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
     });
+
+    function startLoading() {
+      const btn = document.getElementById('enterBtn');
+      const msg = document.getElementById('loadingMessage');
+      const bar = document.getElementById('progressBar');
+
+      btn.style.display = 'none';
+      msg.style.display = 'block';
+      bar.style.display = 'block';
+
+      setTimeout(() => {
+        window.location.href = 'home.html'; // Altere aqui com seu link
+      }, 10200); // 10 segundos de carregamento
+    }
   </script>
 </body>
 </html>
